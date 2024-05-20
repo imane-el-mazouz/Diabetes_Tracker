@@ -1,0 +1,379 @@
+Index: ../ConstructionXpert/src/main/java/Model/Resource.java
+===================================================================
+diff --git a/../ConstructionXpert/src/main/java/Model/Resource.java b/../ConstructionXpert/src/main/java/Model/Resource.java
+deleted file mode 100644
+--- a/../ConstructionXpert/src/main/java/Model/Resource.java	
++++ /dev/null	
+@@ -1,2 +0,0 @@
+-package Model;public class Resource {
+-}
+Index: ../ConstructionXpert/src/main/java/DAO/projectDAO.java
+===================================================================
+diff --git a/../ConstructionXpert/src/main/java/DAO/projectDAO.java b/../ConstructionXpert/src/main/java/DAO/projectDAO.java
+deleted file mode 100644
+--- a/../ConstructionXpert/src/main/java/DAO/projectDAO.java	
++++ /dev/null	
+@@ -1,2 +0,0 @@
+-package DAO;public interface projectDAO {
+-}
+Index: ../ConstructionXpert/src/main/java/DAO/resourceDAOI.java
+===================================================================
+diff --git a/../ConstructionXpert/src/main/java/DAO/resourceDAOI.java b/../ConstructionXpert/src/main/java/DAO/resourceDAOI.java
+deleted file mode 100644
+--- a/../ConstructionXpert/src/main/java/DAO/resourceDAOI.java	
++++ /dev/null	
+@@ -1,2 +0,0 @@
+-package DAO;public class resourceDAOI {
+-}
+Index: ../Etudiants/.gitignore
+===================================================================
+diff --git a/../Etudiants/.gitignore b/../Etudiants/.gitignore
+deleted file mode 100644
+--- a/../Etudiants/.gitignore	
++++ /dev/null	
+@@ -1,38 +0,0 @@
+-target/
+-!.mvn/wrapper/maven-wrapper.jar
+-!**/src/main/**/target/
+-!**/src/test/**/target/
+-
+-### IntelliJ IDEA ###
+-.idea/modules.xml
+-.idea/jarRepositories.xml
+-.idea/compiler.xml
+-.idea/libraries/
+-*.iws
+-*.iml
+-*.ipr
+-
+-### Eclipse ###
+-.apt_generated
+-.classpath
+-.factorypath
+-.project
+-.settings
+-.springBeans
+-.sts4-cache
+-
+-### NetBeans ###
+-/nbproject/private/
+-/nbbuild/
+-/dist/
+-/nbdist/
+-/.nb-gradle/
+-build/
+-!**/src/main/**/build/
+-!**/src/test/**/build/
+-
+-### VS Code ###
+-.vscode/
+-
+-### Mac OS ###
+-.DS_Store
+\ No newline at end of file
+Index: ../ConstructionXpert/src/main/java/DAO/projectDAOI.java
+===================================================================
+diff --git a/../ConstructionXpert/src/main/java/DAO/projectDAOI.java b/../ConstructionXpert/src/main/java/DAO/projectDAOI.java
+deleted file mode 100644
+--- a/../ConstructionXpert/src/main/java/DAO/projectDAOI.java	
++++ /dev/null	
+@@ -1,2 +0,0 @@
+-package DAO;public class projectDAOI {
+-}
+Index: ../ConstructionXpert/src/main/java/Model/Project.java
+===================================================================
+diff --git a/../ConstructionXpert/src/main/java/Model/Project.java b/../ConstructionXpert/src/main/java/Model/Project.java
+deleted file mode 100644
+--- a/../ConstructionXpert/src/main/java/Model/Project.java	
++++ /dev/null	
+@@ -1,2 +0,0 @@
+-package Model;public class Project {
+-}
+Index: ../ConstructionXpert/src/main/java/Model/Task.java
+===================================================================
+diff --git a/../ConstructionXpert/src/main/java/Model/Task.java b/../ConstructionXpert/src/main/java/Model/Task.java
+deleted file mode 100644
+--- a/../ConstructionXpert/src/main/java/Model/Task.java	
++++ /dev/null	
+@@ -1,2 +0,0 @@
+-package Model;public class Task {
+-}
+Index: ../Etudiants/pom.xml
+===================================================================
+diff --git a/../Etudiants/pom.xml b/../Etudiants/pom.xml
+deleted file mode 100644
+--- a/../Etudiants/pom.xml	
++++ /dev/null	
+@@ -1,21 +0,0 @@
+-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+-  <modelVersion>4.0.0</modelVersion>
+-  <groupId>org.example</groupId>
+-  <artifactId>Etudiants</artifactId>
+-  <packaging>war</packaging>
+-  <version>1.0-SNAPSHOT</version>
+-  <name>Etudiants Maven Webapp</name>
+-  <url>http://maven.apache.org</url>
+-  <dependencies>
+-    <dependency>
+-      <groupId>junit</groupId>
+-      <artifactId>junit</artifactId>
+-      <version>3.8.1</version>
+-      <scope>test</scope>
+-    </dependency>
+-  </dependencies>
+-  <build>
+-    <finalName>Etudiants</finalName>
+-  </build>
+-</project>
+Index: ../ConstructionXpert/src/main/java/Connection/DatabaseManager.java
+===================================================================
+diff --git a/../ConstructionXpert/src/main/java/Connection/DatabaseManager.java b/../ConstructionXpert/src/main/java/Connection/DatabaseManager.java
+deleted file mode 100644
+--- a/../ConstructionXpert/src/main/java/Connection/DatabaseManager.java	
++++ /dev/null	
+@@ -1,2 +0,0 @@
+-package Connection;public class DataBaseManager {
+-}
+Index: ../ConstructionXpert/src/main/java/DAO/taskDAO.java
+===================================================================
+diff --git a/../ConstructionXpert/src/main/java/DAO/taskDAO.java b/../ConstructionXpert/src/main/java/DAO/taskDAO.java
+deleted file mode 100644
+--- a/../ConstructionXpert/src/main/java/DAO/taskDAO.java	
++++ /dev/null	
+@@ -1,2 +0,0 @@
+-package DAO;public interface taskDAO {
+-}
+Index: ../ConstructionXpert/src/main/java/DAO/taskDAOI.java
+===================================================================
+diff --git a/../ConstructionXpert/src/main/java/DAO/taskDAOI.java b/../ConstructionXpert/src/main/java/DAO/taskDAOI.java
+deleted file mode 100644
+--- a/../ConstructionXpert/src/main/java/DAO/taskDAOI.java	
++++ /dev/null	
+@@ -1,2 +0,0 @@
+-package DAO;public class taskDAOI {
+-}
+Index: ../Etudiants/.idea/misc.xml
+===================================================================
+diff --git a/../Etudiants/.idea/misc.xml b/../Etudiants/.idea/misc.xml
+deleted file mode 100644
+--- a/../Etudiants/.idea/misc.xml	
++++ /dev/null	
+@@ -1,15 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="MavenProjectsManager">
+-    <option name="originalFiles">
+-      <list>
+-        <option value="$PROJECT_DIR$/pom.xml" />
+-      </list>
+-    </option>
+-    <option name="workspaceImportForciblyTurnedOn" value="true" />
+-  </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/out" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../ConstructionXpert/src/main/java/DAO/resourceDAO.java
+===================================================================
+diff --git a/../ConstructionXpert/src/main/java/DAO/resourceDAO.java b/../ConstructionXpert/src/main/java/DAO/resourceDAO.java
+deleted file mode 100644
+--- a/../ConstructionXpert/src/main/java/DAO/resourceDAO.java	
++++ /dev/null	
+@@ -1,2 +0,0 @@
+-package DAO;public interface resourceDAO {
+-}
+Index: ../Etudiants/.idea/encodings.xml
+===================================================================
+diff --git a/../Etudiants/.idea/encodings.xml b/../Etudiants/.idea/encodings.xml
+deleted file mode 100644
+--- a/../Etudiants/.idea/encodings.xml	
++++ /dev/null	
+@@ -1,7 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Encoding">
+-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../Etudiants/.idea/.gitignore
+===================================================================
+diff --git a/../Etudiants/.idea/.gitignore b/../Etudiants/.idea/.gitignore
+deleted file mode 100644
+--- a/../Etudiants/.idea/.gitignore	
++++ /dev/null	
+@@ -1,8 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+Index: ../Nouveau Document texte.txt
+===================================================================
+diff --git a/../Nouveau Document texte.txt b/../Nouveau Document texte.txt
+deleted file mode 100644
+--- a/../Nouveau Document texte.txt	
++++ /dev/null	
+@@ -1,140 +0,0 @@
+-public class Main {
+-    public static void main(String[] args) {
+-        PoupeeRusse poupee1 = new PoupeeRusse(30);
+-        PoupeeRusse poupee2 = new PoupeeRusse(40);
+-        Menu menu = new Menu(poupee1, poupee2);
+-        menu.displayMenu();
+-    }
+-}
+-abstract class Poupee {
+-    private int size;
+-    private boolean open;
+-
+-    public Poupee(int size) {
+-        this.size = size;
+-    }
+-
+-    public int getSize() {
+-        return size;
+-    }
+-
+-    public boolean isOpen() {
+-        return open;
+-    }
+-
+-    public void setSize(int size) {
+-        this.size = size;
+-    }
+-
+-    public void setOpen(boolean open) {
+-        this.open = open;
+-    }
+-
+-    public abstract void openPoupee();
+-
+-    public abstract void closePoupee();
+-
+-    public abstract void placeIn(Poupee p);
+-
+-    public abstract void takeOut(Poupee p);
+-
+-}
+-class PoupeeRusse extends Poupee {
+-    private Poupee poupee2;
+-
+-    public PoupeeRusse(int size) {
+-        super(size);
+-    }
+-
+-    //public Poupee getPoupee(Poupee poupee2) {
+-    //return poupee2;
+-    //}
+-
+-    public void setPoupee(Poupee poupee2) {
+-        this.poupee2 = poupee2;
+-    }
+-
+-    @Override
+-    public void openPoupee() {
+-        if (!isOpen()) {
+-            setOpen(true);
+-            System.out.println("The doll is open");
+-        } else {
+-            System.out.println("The doll is already open.");
+-        }
+-    }
+-
+-    @Override
+-    public void closePoupee() {
+-        if (isOpen()) {
+-            setOpen(false);
+-            System.out.println("The doll is closed");
+-        } else {
+-            System.out.println("The doll is already closed.");
+-        }
+-    }
+-
+-    @Override
+-    public void placeIn(Poupee p) {
+-        if (poupee2.getSize() > this.getSize()) {
+-            System.out.println("The first doll is bigger than the second one.");
+-        } else if (!p.isOpen()) {
+-            System.out.println("The doll is closed.");
+-        } else {
+-            setPoupee(p);
+-        }
+-    }
+-
+-    @Override
+-    public void takeOut(Poupee p) {
+-
+-}
+-}
+-import java.util.Scanner;                                 
+-class Menu {                                              
+-    public  PoupeeRusse poupee1;                          
+-    public  PoupeeRusse poupee2;                          
+-                                                          
+-    public Menu(PoupeeRusse poupee1, PoupeeRusse poupee2) 
+-        this.poupee1 = poupee1;                           
+-        this.poupee2 = poupee2;                           
+-    }                                                     
+-                                                          
+-    public void displayMenu() {                           
+-        Scanner scanner = new Scanner(System.in);         
+-        int option;                                       
+-        do {                                              
+-            System.out.println("Menu ");                  
+-            System.out.println("1. Open Poupee");         
+-            System.out.println("2. Close Poupee");        
+-            System.out.println("3. PlaceIn(Poupee p)");   
+-            System.out.println("4. Takeout(Poupee p)");   
+-            System.out.println("5. exit");                
+-                                                          
+-            option = scanner.nextInt();                   
+-                                                          
+-            switch (option) {                             
+-                case 1:                                   
+-                    poupee1.openPoupee();                 
+-                    break;                                
+-                case 2:                                   
+-                    poupee1.closePoupee();                
+-                    break;                                
+-                case 3:                                   
+-                    poupee1.placeIn(poupee2);             
+-                    break;                                
+-                case 4:                                   
+-                    poupee1.takeOut(poupee2);             
+-                    break;                                
+-                case 5:                                   
+-                    System.out.println("Exit");           
+-                    break;                                
+-                default:                                  
+-                    System.out.println("Invalid option"); 
+-                    break;                                
+-            }                                             
+-        } while (option != 5);                            
+-        scanner.close();                                  
+-    }                                                     
+-}                                                         
+-                                                          
+\ No newline at end of file
+Index: ../Etudiants/.idea/vcs.xml
+===================================================================
+diff --git a/../Etudiants/.idea/vcs.xml b/../Etudiants/.idea/vcs.xml
+deleted file mode 100644
+--- a/../Etudiants/.idea/vcs.xml	
++++ /dev/null	
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file

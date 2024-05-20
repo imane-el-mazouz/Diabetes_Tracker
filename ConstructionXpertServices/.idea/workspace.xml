@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ConstructionXpertServices:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7c9392ff-8210-4a47-9ac1-9ff85cd1b714" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Brief_3/weather_app/weather_app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConstructionXpert/src/main/java/Connection/DatabaseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConstructionXpert/src/main/java/DAO/projectDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConstructionXpert/src/main/java/DAO/projectDAOI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConstructionXpert/src/main/java/DAO/resourceDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConstructionXpert/src/main/java/DAO/resourceDAOI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConstructionXpert/src/main/java/DAO/taskDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConstructionXpert/src/main/java/DAO/taskDAOI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConstructionXpert/src/main/java/Model/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConstructionXpert/src/main/java/Model/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConstructionXpert/src/main/java/Model/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Connection/DatabaseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/projectDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/projectDAOI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/resourceDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/resourceDAOI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/taskDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/taskDAOI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ENAA PROJECTS/CHALLENGES DES 22/Poupees Russes PROJET/untitled/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Etudiants_gestion/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Etudiants_gestion/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Etudiants_gestion/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Etudiants_gestion/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Etudiants_gestion/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Etudiants_gestion/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/EX/EX.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/EXEMPLE/EXEMPLE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/FIRST CODE/FIRST CODE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/GC/GC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/PROHET DE POUPESS RUSSES/PROHET DE POUPESS RUSSES.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/PROJET DE NQBIL JDBC/PROJET DE NQBIL JDBC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/Responsive/Responsive.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/WEATHER  APP/WEATHER  APP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/WEATHER  APP/src/WEATHER  APP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/code ex html/code ex html.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/projet de nabil/projet de nabil.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/trfghn/trfghn.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../applications/applications.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bootstrap/Bootstrap/Bootstrap.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bootstrap/untitled/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsp-servlet-jdbc-mysql-crud-tutorial - Copie/jsp-servlet-jdbc-mysql-crud-tutorial - Copie.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Nouveau Document texte.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PROJETS DE L'ENAA/WEATHER  APP/src/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/WEATHER  APP/src/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PROJETS DE L'ENAA/WEATHER  APP/src/CityHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/WEATHER  APP/src/CityHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PROJETS DE L'ENAA/WEATHER  APP/src/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/WEATHER  APP/src/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PROJETS DE L'ENAA/WEATHER  APP/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/WEATHER  APP/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PROJETS DE L'ENAA/WEATHER  APP/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PROJETS DE L'ENAA/WEATHER  APP/src/Menu.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2gjYrXTZeu8b3Qr5iQXgpErqArd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Tomcat Server.Tomcat 8.5.100.executor": "Run",
+    "git-widget-placeholder": "Contact",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.100" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.100" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="ConstructionXpertServices:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ConstructionXpertServices_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="7e1ccfb0-0b3b-4a74-bf5a-599b3184d377" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ConstructionXpertServices:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c9392ff-8210-4a47-9ac1-9ff85cd1b714" name="Changes" comment="" />
+      <created>1716212654823</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716212654823</updated>
+      <workItem from="1716212655962" duration="122000" />
+      <workItem from="1716212791424" duration="452000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
