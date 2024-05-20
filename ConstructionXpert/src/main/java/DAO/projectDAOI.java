@@ -2,6 +2,7 @@ package DAO;
 
 import Connection.DatabaseManager;
 import Model.Project;
+import Model.Resource;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,14 +10,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-public class ProjectDAOI implements ProjectDAO {
+public class projectDAOI implements projectDAO {
     @Override
     public List<Project> getAllProjects() throws SQLException {
         List<Project> projects = new ArrayList<>();
 
         try (Connection connection = DatabaseManager.getConnection();
-             PreparedStatement statement = ((Connection) connection).prepareStatement("SELECT * FROM projects");
+             PreparedStatement statement = connection.prepareStatement("SELECT * FROM projects");
              ResultSet resultSet = statement.executeQuery()) {
 
             while (resultSet.next()) {
