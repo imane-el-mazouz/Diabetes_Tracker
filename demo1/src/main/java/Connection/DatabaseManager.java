@@ -21,7 +21,7 @@ public class DatabaseManager {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/construction", "imane", "1234");
             return connection;
         } catch (SQLException | ClassNotFoundException var2) {
-            throw new SQLException("error", var2);
+            throw new SQLException("errorrrrrrrr", var2);
         }
     }
 }
