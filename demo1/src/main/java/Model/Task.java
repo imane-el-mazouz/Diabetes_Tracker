@@ -1,16 +1,17 @@
+
 package Model;
 
 import java.util.Date;
 
 public class Task {
 
-        private int taskId;
-        private String taskName;
-        private String taskDescription;
-        private Date debutTask;
-        private Date finTask;
-        private String status;
-        private int id;
+    private int taskId;
+    private String taskName;
+    private String taskDescription;
+    private Date debutTask;
+    private Date finTask;
+    private String status;
+    private int id;
 
     public Task(int taskId, String taskName, String taskDescription, Date debutTask, Date finTask, String status, int id) {
         this.taskId = taskId;

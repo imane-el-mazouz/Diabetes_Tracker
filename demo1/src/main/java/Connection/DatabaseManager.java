@@ -12,9 +12,7 @@ public class DatabaseManager {
 
     public static Connection getConnection() throws SQLException {
         try {
-            // Charger le driver JDBC
             Class.forName(JDBC_DRIVER);
-            // Établir la connexion
             return DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD);
         } catch (ClassNotFoundException e) {
             throw new SQLException("Échec du chargement du driver JDBC", e);
