@@ -18,6 +18,13 @@ public class Project {
         this.fin = fin;
         this.budget = budget;
     }
+    public Project(String nom, String description, Date debut, Date fin, int budget) {
+        this.nom = nom;
+        this.description = description;
+        this.debut = debut;
+        this.fin = fin;
+        this.budget = budget;
+    }
 
     public int getId() {
         return this.id;

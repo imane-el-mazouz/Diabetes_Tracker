@@ -30,7 +30,7 @@ public class DisplayProject extends HttpServlet {
             projects = projectDAO.getAllProjects();
             System.out.println("Number of projects retrieved: " + projects.size());
             request.setAttribute("projects", projects);
-            request.getRequestDispatcher("/WEB-INF/projects.jsp").forward(request, response);
+            this.getServletContext().getRequestDispatcher("/WEB-INF/projects.jsp").forward(request, response);
         } catch (SQLException e) {
             e.printStackTrace();
             response.sendRedirect("");
