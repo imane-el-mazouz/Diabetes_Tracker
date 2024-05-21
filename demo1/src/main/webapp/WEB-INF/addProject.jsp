@@ -13,7 +13,7 @@
         <label for="id">Id:</label>
         <input type="text" id="id" name="id" value="${project.id}"><br>
         <label for="nom">Name:</label>
-        <input type="text" id="nom" name="name" value="${project.nom}"><br>
+        <input type="text" id="nom" name="nom" value="${project.nom}"><br>
         <label for="description">Description:</label>
         <input type="text" id="description" name="description" value="${project.description}"><br>
         <label for="debut">Start Date:</label>

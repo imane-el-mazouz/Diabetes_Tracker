@@ -26,7 +26,9 @@ public class DisplayProject extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            List<Project> projects = projectDAO.getAllProjects();
+            List<Project> projects;
+            projects = projectDAO.getAllProjects();
+            System.out.println("Number of projects retrieved: " + projects.size());
             request.setAttribute("projects", projects);
             request.getRequestDispatcher("/WEB-INF/projects.jsp").forward(request, response);
         } catch (SQLException e) {
