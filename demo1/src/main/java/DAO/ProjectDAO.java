@@ -7,6 +7,5 @@ import java.util.List;
 
 public interface ProjectDAO {
     List<Project> getAllProjects() throws SQLException;
-
-    void addProject(Project var1) throws SQLException;
+    void addProject(Project project) throws SQLException;
 }

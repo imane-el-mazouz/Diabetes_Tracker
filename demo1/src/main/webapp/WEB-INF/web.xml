@@ -3,4 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
+    <display-name>ConstructionXpert</display-name>
+
+    <servlet>
+        <servlet-name>DisplayProject</servlet-name>
+        <servlet-class>Servlets.DisplayProject</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DisplayProject</servlet-name>
+        <url-pattern>/display</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddProject</servlet-name>
+        <servlet-class>Servlets.AddProject</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddProject</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

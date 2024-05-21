@@ -5,23 +5,22 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseManager {
-    private static final String jdbcURL = "jdbc:mysql://localhost:3306/construction";
-    private static final String jdbcUserName = "imane";
-    private static final String jdbcPassword = "1234";
-    private static final String jdbcDriver = "com.mysql.cj.jdbc.Driver";
-
-    public DatabaseManager() {
-    }
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/construction";
+    private static final String JDBC_USERNAME = "imane";
+    private static final String JDBC_PASSWORD = "1234";
+    private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
 
     public static Connection getConnection() throws SQLException {
-        Connection connection = null;
-
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/construction", "imane", "1234");
-            return connection;
-        } catch (SQLException | ClassNotFoundException var2) {
-            throw new SQLException("errorrrrrrrr", var2);
+            // Charger le driver JDBC
+            Class.forName(JDBC_DRIVER);
+            // Établir la connexion
+            return DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD);
+        } catch (ClassNotFoundException e) {
+            throw new SQLException("Échec du chargement du driver JDBC", e);
+        } catch (SQLException e) {
+            System.err.println("Erreur lors de l'établissement de la connexion : " + e.getMessage());
+            throw e;
         }
     }
 }
