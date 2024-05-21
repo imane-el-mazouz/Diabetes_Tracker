@@ -90,7 +90,6 @@ public class ProjectDAOI implements ProjectDAO {
     @Override
     public void updateProject(Project project) throws SQLException {
         String sql = "UPDATE projects SET nom = ?, description = ?, debut = ?, fin = ?, budget = ? WHERE id = ?";
-
         try (Connection connection = DatabaseManager.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, project.getNom());
@@ -102,5 +101,6 @@ public class ProjectDAOI implements ProjectDAO {
             statement.executeUpdate();
         }
     }
+
 }
 

@@ -25,9 +25,13 @@ public class UpdateProject extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
+            System.out.println("&");
             int id = Integer.parseInt(request.getParameter("id"));
+            System.out.println("&&");
             Project project = projectDAO.getProjectById(id);
+            System.out.println("&&&");
             request.setAttribute("project", project);
+            System.out.println("&&&&");
             request.getRequestDispatcher("/WEB-INF/updateProject.jsp").forward(request, response);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -54,4 +58,5 @@ public class UpdateProject extends HttpServlet {
             request.getRequestDispatcher("/WEB-INF/projects.jsp").forward(request, response);
         }
     }
+
 }
