@@ -599,7 +599,7 @@
         <div class="footer__col">
             <h4>Services</h4>
             <ul class="footer__links">
-                <li><a href="#">Management service</a></li>
+                <li><a href="#">Management com.config.service</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Clubs</a></li>
             </ul>

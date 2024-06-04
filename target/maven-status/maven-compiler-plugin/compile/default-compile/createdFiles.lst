@@ -1,0 +1,8 @@
+com\config\controller\GlycemieController.class
+com\config\controller\HelloController.class
+com\config\enums\Level.class
+com\config\model\Glycemie.class
+com\config\repository\GlycemieRepo.class
+com\config\repository\impl\GlycemieRepoImpl.class
+com\config\PersistenceJPAConfig.class
+com\config\service\GlycemieService.class
