@@ -4,6 +4,10 @@ public enum Level {
     NORMAL(70, 140),
     HYPOGLYCEMIA(Double.NEGATIVE_INFINITY, 70),
     HYPERGLYCEMIA(140, Double.POSITIVE_INFINITY);
+//
+//    NORMAL ,
+//    HYPOGLYCEMIA ,
+//    HYPERGLYCEMIA ;
 
     private final double minLevel;
     private final double maxLevel;
@@ -29,4 +33,6 @@ public enum Level {
         }
         throw new IllegalArgumentException("Invalid glycemic level: " + value);
     }
+
+
 }

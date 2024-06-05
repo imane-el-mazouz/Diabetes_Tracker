@@ -1,5 +1,7 @@
 package com.config.model;
 
+import com.config.enums.Level;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -9,54 +11,25 @@ public class Glycemie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
-    @Column(name = "date")
     private LocalDateTime date;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "level")
     private Level level;
-
-    public enum Level {
-        NORMAL(70, 140),
-        HYPOGLYCEMIA(Double.NEGATIVE_INFINITY, 70),
-        HYPERGLYCEMIA(140, Double.POSITIVE_INFINITY);
-
-        private final double minLevel;
-        private final double maxLevel;
-
-        Level(double minLevel, double maxLevel) {
-            this.minLevel = minLevel;
-            this.maxLevel = maxLevel;
-        }
-
-        public double getMinLevel() {
-            return minLevel;
-        }
-
-        public double getMaxLevel() {
-            return maxLevel;
-        }
-
-        public static Level fromValue(double value) {
-            for (Level level : Level.values()) {
-                if (value >= level.minLevel && value < level.maxLevel) {
-                    return level;
-                }
-            }
-            throw new IllegalArgumentException("Invalid glycemic level: " + value);
-        }
-    }
 
     public Glycemie() {
     }
 
-    public Glycemie(Long id, LocalDateTime date, double levelValue) {
+    public Glycemie(LocalDateTime date, Level level) {
+        this.date = date;
+        this.level = level;
+    }
+
+    public Glycemie(Long id, LocalDateTime date, Level level) {
         this.id = id;
         this.date = date;
-        this.level = Level.fromValue(levelValue);
+        this.level = level;
     }
 
     public LocalDateTime getDate() {
@@ -71,8 +44,8 @@ public class Glycemie {
         return level;
     }
 
-    public void setLevel(double levelValue) {
-        this.level = Level.fromValue(levelValue);
+    public void setLevel(Level level) {
+        this.level = level;
     }
 
     public void setId(Long id) {

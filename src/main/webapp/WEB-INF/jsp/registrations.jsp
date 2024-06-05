@@ -11,6 +11,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,35 +34,37 @@
 </head>
 <body>
 <header></header>
-<div class="snippet-container">
+<div class="container-fluid container-fluid-two d-flex flex-column justify-content-centre align-items-center gap-4">
+
     <h1>list of recorded blood glucose readings with their details.</h1>
 
     <table>
+        <thead>
         <tr>
             <th>Id</th>
             <th>Date</th>
             <th>Level</th>
         </tr>
+        </thead>
+        <tbody>
 
         <c:forEach var="glycemie" items="${listGlycemies}">
             <tr>
-               <td>${glycemie.id}</td>
+                <td>${glycemie.id}</td>
+                <td>${glycemie.date}</td>
+                <td>${glycemie.level}</td>
 
-
-
-
-
+                <td>
+                    <button><a href="${pageContext.request.contextPath}/delete/${glycemie.id}">Delete</a></button>
+                </td>
             </tr>
 
-
-
-
-
-
         </c:forEach>
+        </tbody>
+
     </table>
+    <button><a href="${pageContext.request.contextPath}/new">Add</a> </button>
 
 </div>
-jjjjj
 </body>
 </html>

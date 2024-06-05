@@ -24,8 +24,7 @@ public class PersistenceJPAConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan("model");
-        em.setPersistenceUnitName("Glycemie");
+        em.setPackagesToScan("com.config.model");
 
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();

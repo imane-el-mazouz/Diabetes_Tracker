@@ -2,35 +2,45 @@ package com.config.repository.impl;
 
 import com.config.model.Glycemie;
 import com.config.repository.GlycemieRepo;
-import org.springframework.stereotype.Component;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.Optional;
 
-@Component
+@Repository
 public class GlycemieRepoImpl implements GlycemieRepo {
+
+    @PersistenceContext
+    private EntityManager entityManager;
+
     @Override
     public <S extends Glycemie> S save(S entity) {
-        return null;
+        entityManager.persist(entity);
+        return entity;
     }
 
     @Override
     public <S extends Glycemie> Iterable<S> saveAll(Iterable<S> entities) {
-        return null;
+        for (S entity : entities) {
+            entityManager.persist(entity);
+        }
+        return entities;
     }
 
     @Override
     public Optional<Glycemie> findById(Long aLong) {
-        return Optional.empty();
+        return Optional.ofNullable(entityManager.find(Glycemie.class, aLong));
     }
 
     @Override
     public boolean existsById(Long aLong) {
-        return false;
+        return entityManager.find(Glycemie.class, aLong) != null;
     }
 
     @Override
     public Iterable<Glycemie> findAll() {
-        return null;
+        return entityManager.createQuery("FROM Glycemie", Glycemie.class).getResultList();
     }
 
     @Override
@@ -40,31 +50,40 @@ public class GlycemieRepoImpl implements GlycemieRepo {
 
     @Override
     public long count() {
-        return 0;
+        return entityManager.createQuery("SELECT COUNT(g) FROM Glycemie g", Long.class).getSingleResult();
     }
 
     @Override
     public void deleteById(Long aLong) {
-
+        Glycemie glycemie = entityManager.find(Glycemie.class, aLong);
+        if (glycemie != null) {
+            entityManager.remove(glycemie);
+        }
     }
 
     @Override
     public void delete(Glycemie entity) {
-
+        entityManager.remove(entity);
     }
 
     @Override
     public void deleteAllById(Iterable<? extends Long> longs) {
-
+        for (Long id : longs) {
+            deleteById(id);
+        }
     }
 
     @Override
     public void deleteAll(Iterable<? extends Glycemie> entities) {
-
+        for (Glycemie entity : entities) {
+            delete(entity);
+        }
     }
 
     @Override
     public void deleteAll() {
 
     }
+
+
 }

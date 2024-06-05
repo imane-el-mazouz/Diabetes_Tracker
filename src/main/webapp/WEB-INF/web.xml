@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
   <display-name>Spring MVC Application</display-name>
+  <absolute-ordering />
 
   <!-- Step 1: Configure Spring MVC Dispatcher Servlet -->
   <servlet>
