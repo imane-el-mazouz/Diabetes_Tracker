@@ -1,5 +1,7 @@
 package com.config.service;
 
+import com.config.enums.Level;
+import com.config.model.Conseil;
 import com.config.model.Glycemie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,5 +29,9 @@ public class GlycemieService {
     @Transactional
     public void deleteGlycemieById(Long id) {
         glycemieRepo.deleteById(id);
+    }
+
+    public Conseil getConseilByLevel(Level level) {
+        return null;
     }
 }
