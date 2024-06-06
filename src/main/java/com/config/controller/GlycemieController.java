@@ -3,8 +3,10 @@ package com.config.controller;
 import com.config.enums.Level;
 import com.config.model.Conseil;
 import com.config.model.Glycemie;
+import com.config.model.Medicament;
 import com.config.service.ConseilService; // Importez ConseilService
 import com.config.service.GlycemieService;
+import com.config.service.MedicamentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 @Controller
 @RequestMapping
@@ -22,7 +25,9 @@ public class GlycemieController {
     private GlycemieService glycemieService;
 
     @Autowired
-    private ConseilService conseilService; // Utilisez ConseilService ici
+    private ConseilService conseilService;
+    @Autowired
+    private MedicamentService medicamentService ;
 
     @GetMapping(value = "/glycemie")
     public String listGlycemies(ModelMap modelMap) {
@@ -36,6 +41,60 @@ public class GlycemieController {
         return "add";
     }
 
+//    @PostMapping("/new")
+//    public String saveGlycemie(@RequestParam("level") double levelValue,
+//                               @RequestParam("date") String date,
+//                               Model model) {
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+//        LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+//        Level level = Level.fromValue(levelValue);
+//        Glycemie glycemie = new Glycemie(dateTime, level);
+//        glycemieService.saveGlycemie(glycemie);
+//
+//        Conseil conseil = conseilService.getConseilByLevel(level);
+//        model.addAttribute("conseil", conseil);
+//
+//        return "viewConseil";
+//    }
+//@PostMapping("/new")
+//public String saveGlycemie(@RequestParam("level") double levelValue,
+//                           @RequestParam("date") String date,
+//                           Model model) {
+//    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+//    LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+//    Level level = Level.fromValue(levelValue);
+//    Glycemie glycemie = new Glycemie(dateTime, level);
+//    glycemieService.saveGlycemie(glycemie);
+//
+//    Conseil conseil = conseilService.getConseilByLevel(level);
+//    model.addAttribute("conseil", conseil);
+//
+//    List<Medicament> medicaments = medicamentService.getMedicamentsByLevel(level);
+//    model.addAttribute("medicaments", medicaments);
+//
+//    return "viewConseil";
+//}
+
+
+//@PostMapping("/new")
+//public String saveGlycemie(@RequestParam("level") double levelValue,
+//                           @RequestParam("date") String date,
+//                           Model model) {
+//    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+//    LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+//    Level level = Level.fromValue(levelValue);
+//    Glycemie glycemie = new Glycemie(dateTime, level);
+//    glycemieService.saveGlycemie(glycemie);
+//
+//    Conseil conseil = conseilService.getConseilByLevel(level);
+//    model.addAttribute("conseil", conseil);
+//
+//    List<Medicament> medicaments = medicamentService.getMedicamentsByLevel(level);
+//    model.addAttribute("medicaments", medicaments);
+//
+//    return "viewConseil";
+//}
+
     @PostMapping("/new")
     public String saveGlycemie(@RequestParam("level") double levelValue,
                                @RequestParam("date") String date,
@@ -48,6 +107,12 @@ public class GlycemieController {
 
         Conseil conseil = conseilService.getConseilByLevel(level);
         model.addAttribute("conseil", conseil);
+
+        List<Medicament> medicaments = medicamentService.getMedicamentsByLevel(level);
+        if (medicaments == null || medicaments.isEmpty()) {
+            medicaments = medicamentService.getDefaultMedicamentsByLevel(level);
+        }
+        model.addAttribute("medicaments", medicaments);
 
         return "viewConseil";
     }
