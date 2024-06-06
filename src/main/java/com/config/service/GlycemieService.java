@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.config.repository.GlycemieRepo;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -33,5 +34,10 @@ public class GlycemieService {
 
     public Conseil getConseilByLevel(Level level) {
         return null;
+    }
+
+    public List<Glycemie> getHourlyGlycemiaData() {
+        LocalDateTime lastHour = LocalDateTime.now().minusHours(1);
+        return glycemieRepo.findHourlyGlycemiaData(lastHour);
     }
 }

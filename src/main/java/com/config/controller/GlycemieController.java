@@ -4,7 +4,7 @@ import com.config.enums.Level;
 import com.config.model.Conseil;
 import com.config.model.Glycemie;
 import com.config.model.Medicament;
-import com.config.service.ConseilService; // Importez ConseilService
+import com.config.service.ConseilService;
 import com.config.service.GlycemieService;
 import com.config.service.MedicamentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -122,4 +123,19 @@ public class GlycemieController {
         glycemieService.deleteGlycemieById(id);
         return "redirect:/glycemie";
     }
+    @GetMapping(value = "/chart")
+    public String getChartData(@RequestParam("view") String viewType, Model model) {
+        List<Glycemie> glycemies;
+
+        if ("hourly".equals(viewType)) {
+            glycemies = glycemieService.getHourlyGlycemiaData();
+        } else {
+            glycemies = new ArrayList<>();
+        }
+
+        model.addAttribute("listGlycemies", glycemies);
+        model.addAttribute("viewType", viewType);
+        return "viewConseil";
+    }
+
 }
