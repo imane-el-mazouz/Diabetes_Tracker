@@ -128,7 +128,7 @@ public class GlycemieController {
         List<Glycemie> glycemies;
 
         if ("hourly".equals(viewType)) {
-            glycemies = glycemieService.getHourlyGlycemiaData();
+            glycemies = glycemieService.findHourlyGlycemiaData();
         } else {
             glycemies = new ArrayList<>();
         }
@@ -137,5 +137,4 @@ public class GlycemieController {
         model.addAttribute("viewType", viewType);
         return "viewConseil";
     }
-
 }

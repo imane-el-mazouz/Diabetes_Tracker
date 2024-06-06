@@ -89,7 +89,9 @@ public class GlycemieRepoImpl implements GlycemieRepo {
 
 
     @Override
-    public List<Glycemie> findHourlyGlycemiaData(LocalDateTime lastHour) {
+    public List<Glycemie> findHourlyGlycemiaData(LocalDateTime startDate, LocalDateTime endDate) {
         return null;
+//        return entityManager.findHourlyGlycemiaData();
+
     }
 }
