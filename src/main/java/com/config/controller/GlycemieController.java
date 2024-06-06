@@ -3,6 +3,7 @@ package com.config.controller;
 import com.config.enums.Level;
 import com.config.model.Conseil;
 import com.config.model.Glycemie;
+import com.config.service.ConseilService; // Importez ConseilService
 import com.config.service.GlycemieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,9 +20,9 @@ public class GlycemieController {
 
     @Autowired
     private GlycemieService glycemieService;
-    @Autowired
-    private GlycemieService conseilService ;
 
+    @Autowired
+    private ConseilService conseilService; // Utilisez ConseilService ici
 
     @GetMapping(value = "/glycemie")
     public String listGlycemies(ModelMap modelMap) {
@@ -35,36 +36,25 @@ public class GlycemieController {
         return "add";
     }
 
-//    @PostMapping("/new")
-//    public String saveGlycemie(@RequestParam("level") double levelValue,
-//                               @RequestParam("date") String date) {
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
-//        LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
-//        Level level = Level.fromValue(levelValue);
-//        Glycemie glycemie = new Glycemie(dateTime, level);
-//        glycemieService.saveGlycemie(glycemie);
-//        return "redirect:/glycemie";
-//    }
-@PostMapping("/new")
-public String saveGlycemie(@RequestParam("level") double levelValue,
-                           @RequestParam("date") String date,
-                           Model model) {
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
-    LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
-    Level level = Level.fromValue(levelValue);
-    Glycemie glycemie = new Glycemie(dateTime, level);
-    glycemieService.saveGlycemie(glycemie);
+    @PostMapping("/new")
+    public String saveGlycemie(@RequestParam("level") double levelValue,
+                               @RequestParam("date") String date,
+                               Model model) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+        LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+        Level level = Level.fromValue(levelValue);
+        Glycemie glycemie = new Glycemie(dateTime, level);
+        glycemieService.saveGlycemie(glycemie);
 
-    Conseil conseil = conseilService.getConseilByLevel(level);
-    model.addAttribute("conseil", conseil);
+        Conseil conseil = conseilService.getConseilByLevel(level);
+        model.addAttribute("conseil", conseil);
 
-    return "viewConseil";
-}
+        return "viewConseil";
+    }
+
     @GetMapping("/delete/{id}")
     public String deleteGlycemie(@PathVariable Long id) {
         glycemieService.deleteGlycemieById(id);
         return "redirect:/glycemie";
     }
 }
-
-

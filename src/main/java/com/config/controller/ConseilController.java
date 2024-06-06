@@ -3,6 +3,7 @@ package com.config.controller;
 import com.config.enums.Level;
 import com.config.model.Conseil;
 import com.config.service.ConseilService;
+import com.config.service.GlycemieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +15,10 @@ public class ConseilController {
 
     @Autowired
     private ConseilService conseilService;
+
+    @Autowired
+
+    private GlycemieService glycemieService ;
 
     @GetMapping
     public String listConseils(Model model) {
