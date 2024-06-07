@@ -15,4 +15,5 @@ public interface GlycemieRepo extends CrudRepository<Glycemie, Long> {
     @Query("SELECT g FROM Glycemie g WHERE g.date >= :startDate AND g.date < :endDate")
     List<Glycemie> findHourlyGlycemiaData(@Param("startDate") LocalDateTime startDate, @Param("endDate") LocalDateTime endDate);
 
+    List<Glycemie> findAllByDate(LocalDateTime date);
 }

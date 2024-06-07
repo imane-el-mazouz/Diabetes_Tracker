@@ -127,11 +127,9 @@ public class GlycemieController {
     public String getChartData(@RequestParam("view") String viewType, Model model) {
         List<Glycemie> glycemies;
 
-        if ("hourly".equals(viewType)) {
+
             glycemies = glycemieService.findHourlyGlycemiaData();
-        } else {
-            glycemies = new ArrayList<>();
-        }
+
 
         model.addAttribute("listGlycemies", glycemies);
         model.addAttribute("viewType", viewType);

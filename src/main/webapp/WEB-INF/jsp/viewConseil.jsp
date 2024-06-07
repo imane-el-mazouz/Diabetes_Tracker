@@ -31,6 +31,7 @@
     <button type="submit">Apply</button>
 </form>
 <canvas id="glycemiaChart" width="400" height="200"></canvas>
+
 <script>
     const normalData = [];
     const hypoData = [];
@@ -39,23 +40,28 @@
     <c:forEach var="glycemie" items="${listGlycemies}">
     labels.push('${glycemie.date}');
     <c:choose>
-    <c:when test="${glycemie.level >= 70 && glycemie.level < 140}">
-    normalData.push(${glycemie.level});
+    <c:when test="${glycemie.level == 'NORMAL'}">
+    normalData.push(${50});
     hypoData.push(null);
     hyperData.push(null);
     </c:when>
-    <c:when test="${glycemie.level < 70}">
+    <c:when test="${glycemie.level == 'HYPOGLYCEMIA'}">
     normalData.push(null);
-    hypoData.push(${glycemie.level});
+    hypoData.push(${20});
     hyperData.push(null);
     </c:when>
     <c:otherwise>
     normalData.push(null);
     hypoData.push(null);
-    hyperData.push(${glycemie.level});
+    hyperData.push(${80});
     </c:otherwise>
     </c:choose>
     </c:forEach>
+
+        console.log(labels)
+        console.log(normalData)
+        console.log(hyperData)
+        console.log(hypoData)
 
     const ctx = document.getElementById('glycemiaChart').getContext('2d');
     const glycemiaChart = new Chart(ctx, {
@@ -85,19 +91,6 @@
                     backgroundColor: 'rgba(255, 159, 64, 0.2)',
                     borderColor: 'rgba(255, 159, 64, 1)',
                     borderWidth: 1
-                },
-                {
-                    type: 'line',
-                    label: 'Glycemia Level',
-                    data: labels.map((_, index) => {
-                        return normalData[index] !== null ? normalData[index] :
-                            hypoData[index] !== null ? hypoData[index] :
-                                hyperData[index];
-                    }),
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderWidth: 1,
-                    fill: true
                 }
             ]
         },
