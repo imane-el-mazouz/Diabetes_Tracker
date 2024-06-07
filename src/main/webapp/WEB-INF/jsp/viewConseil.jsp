@@ -32,26 +32,74 @@
 </form>
 <canvas id="glycemiaChart" width="400" height="200"></canvas>
 <script>
-    const glycemiaData = [];
+    const normalData = [];
+    const hypoData = [];
+    const hyperData = [];
     const labels = [];
     <c:forEach var="glycemie" items="${listGlycemies}">
     labels.push('${glycemie.date}');
-    glycemiaData.push(${glycemie.level});
+    <c:choose>
+    <c:when test="${glycemie.level >= 70 && glycemie.level < 140}">
+    normalData.push(${glycemie.level});
+    hypoData.push(null);
+    hyperData.push(null);
+    </c:when>
+    <c:when test="${glycemie.level < 70}">
+    normalData.push(null);
+    hypoData.push(${glycemie.level});
+    hyperData.push(null);
+    </c:when>
+    <c:otherwise>
+    normalData.push(null);
+    hypoData.push(null);
+    hyperData.push(${glycemie.level});
+    </c:otherwise>
+    </c:choose>
     </c:forEach>
 
     const ctx = document.getElementById('glycemiaChart').getContext('2d');
     const glycemiaChart = new Chart(ctx, {
-        type: 'bar',
         data: {
             labels: labels,
-            datasets: [{
-                label: 'Glycemia Level',
-                data: glycemiaData,
-                borderColor: 'rgba(75, 192, 192, 1)',
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderWidth: 1,
-                fill: true
-            }]
+            datasets: [
+                {
+                    type: 'bar',
+                    label: 'Normal',
+                    data: normalData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                },
+                {
+                    type: 'bar',
+                    label: 'Hypoglycemia',
+                    data: hypoData,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                },
+                {
+                    type: 'bar',
+                    label: 'Hyperglycemia',
+                    data: hyperData,
+                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                    borderWidth: 1
+                },
+                {
+                    type: 'line',
+                    label: 'Glycemia Level',
+                    data: labels.map((_, index) => {
+                        return normalData[index] !== null ? normalData[index] :
+                            hypoData[index] !== null ? hypoData[index] :
+                                hyperData[index];
+                    }),
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 1,
+                    fill: true
+                }
+            ]
         },
         options: {
             scales: {

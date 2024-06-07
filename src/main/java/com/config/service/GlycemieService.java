@@ -37,7 +37,7 @@ public class GlycemieService {
     }
 
 
-
+    @Transactional
     public List<Glycemie> findHourlyGlycemiaData() {
         LocalDateTime lastHour = LocalDateTime.now().minusHours(1);
         return glycemieRepo.findHourlyGlycemiaData(lastHour, LocalDateTime.now());
