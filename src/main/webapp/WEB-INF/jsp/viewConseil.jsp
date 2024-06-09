@@ -58,10 +58,10 @@
     </c:choose>
     </c:forEach>
 
-        console.log(labels)
-        console.log(normalData)
-        console.log(hyperData)
-        console.log(hypoData)
+    console.log(labels)
+    console.log(normalData)
+    console.log(hyperData)
+    console.log(hypoData)
 
     const ctx = document.getElementById('glycemiaChart').getContext('2d');
     const glycemiaChart = new Chart(ctx, {
