@@ -336,8 +336,6 @@
         .nav__links li a:hover {
             color: white ;
         }
-
-
         #div {
             margin-bottom: 100px;
             background-color: rgba(255, 255, 255, 0.9);
@@ -346,10 +344,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 585px;
             margin-top: 100px;
-        }
-
-        h1 {
-            margin-bottom: 20px;
         }
 
         .form-grouppp {
@@ -401,14 +395,14 @@
 <div class="contact-info">
     <div>📞 1234-5678-9012</div>
     <div>📧 Health@diabets.com</div>
-
+    <div>🕒 Mon - Sun </div>
 </div>
 </div>
 <nav>
     <div class="nav__bar">
         <div class="nav__header">
             <div class="logo nav__logo">
-                <img src="https://i.pinimg.com/564x/25/dc/47/25dc4724f96ecead1872f71ec2b4c57d.jpg" alt="ConstructionExpert Logo" style="max-width: 160px; height: 56px;margin-top: -68px">
+                <img src="https://i.pinimg.com/564x/25/dc/47/25dc4724f96ecead1872f71ec2b4c57d.jpg" alt="ConstructionExpert Logo" style="max-width: 160px; height: 56px;">
             </div>
         </div>
         <ul class="nav__links" id="nav-links">
@@ -426,8 +420,9 @@
         </div>
     </div>
 </section>
+
+<h1 class="text-center" style="font-size: 32px;font-weight: 600;text-transform: capitalize;margin-bottom: 24px;color: blue;}">Add Registration</h1>
 <div class="container" id="div">
-    <h1>Add Registration</h1>
     <form action="${pageContext.request.contextPath}/new" method="post">
         <div class="form-grouppp">
             <label for="date">Start Date:</label>
@@ -438,12 +433,11 @@
             <input type="number" id="level" name="level" required>
 
         </div>
-
         <button type="submit" onclick="return confirm('Are you sure you want to add this registration?')">Add</button>
     </form>
 </div>
 <!-- Footer Area -->
-<footer id="footer" class="footer " style="background-color: white">
+<footer id="footer" class="footer ">
     <!-- Footer Top -->
     <div class="footer-top">
         <div class="container">
@@ -478,7 +472,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consulting</a></li>
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
@@ -491,7 +485,7 @@
                 <div class="col-lg-3 col-md-6 col-12">
                     <div class="single-footer">
                         <h2>Open Hours</h2>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+                        <p>Monday - Sunday </p>
                         <ul class="time-sidual">
                             <li class="day">24/24h></li>
                         </ul>
@@ -501,7 +495,7 @@
                     <div class="single-footer">
                         <h2>Newsletter</h2>
                         <p>subscribe to our newsletter to get all our news in your inbox.</p>
-                        <form action=""target="_blank" class="newsletter-inner">
+                        <form action="#Home"target="_blank" class="newsletter-inner">
                             <input name="EMAIL" placeholder="Your email address" class="common-input" onfocus="this.placeholder = ''"
                                    onblur="this.placeholder = 'Your email address'" required="" type="email">
                             <button class="btn">Subscribe</button>

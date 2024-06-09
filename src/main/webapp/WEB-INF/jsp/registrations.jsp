@@ -392,6 +392,39 @@
             text-decoration: none;
             color: inherit;
         }
+        .btn delete {
+            --bs-btn-padding-x: 0.75rem;
+            --bs-btn-padding-y: 0.375rem;
+            --bs-btn-font-family: ;
+            --bs-btn-font-size: 1rem;
+            --bs-btn-font-weight: 400;
+            --bs-btn-line-height: 1.5;
+
+            --bs-btn-bg: transparent;
+
+            --bs-btn-border-color: transparent;
+
+            --bs-btn-hover-border-color: transparent;
+            --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+            --bs-btn-disabled-opacity: 0.65;
+
+            display: inline-block;
+            padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+            font-family: var(--bs-btn-font-family);
+            font-size: var(--bs-btn-font-size);
+            font-weight: var(--bs-btn-font-weight);
+            line-height: var(--bs-btn-line-height);
+            color: blue;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            background-color: var(--bs-btn-bg);
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
     </style>
     <title>Home page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -402,7 +435,7 @@
 <div class="contact-info">
     <div>📞 1234-5678-9012</div>
     <div>📧 Health@diabets.com</div>
-
+    <div>🕒 Mon - Sun </div>
 </div>
 </div>
 <nav>
@@ -422,12 +455,7 @@
     </div>
 </nav>
 <div class="container-fluid">
-    <h1 style="    margin-top: 41px;
-    margin-bottom: 4.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: black;margin-left: 20%">List of recorded blood glucose readings.</h1>
-
+    <h1 class="text-center" style="font-size: 32px;font-weight: 600;text-transform: capitalize;margin-bottom: 24px;color: blue;">List of recorded blood glucose readings.</h1>
     <div class="row">
         <c:forEach var="glycemie" items="${listGlycemies}">
             <div class="col-lg-4 col-md-6">
@@ -436,18 +464,21 @@
                         <h5 class="card-title">ID: ${glycemie.id}</h5>
                         <p class="card-text">Date: ${glycemie.date}</p>
                         <p class="card-text">Level: ${glycemie.level}</p>
-                        <a href="${pageContext.request.contextPath}/delete/${glycemie.id}"onclick="return confirm('Are you sure you want to delete this glycemie?')" class="btn">Delete</a>
-                    </div>
+                        <div class="text-center" >
+                        <a href="${pageContext.request.contextPath}/delete/${glycemie.id}"onclick="return confirm('Are you sure you want to delete this glycemie?')" class="btn" style="background-color: blue;
+            color: white;">Delete</a>
+                        </div>
+                        </div>
                 </div>
             </div>
         </c:forEach>
     </div>
 
-    <div class="text-center mt-4">
+    <div class="text-center mt-4" >
         <a href="${pageContext.request.contextPath}/new" onclick="return confirm('Are you sure you want to add a new glycemie?')"class="btn btn-primary">Add New Glycemie</a>
     </div>
 </div>
-<footer id="footer" class="footer" style="background-color: white">
+<footer id="footer" class="footer ">
     <!-- Footer Top -->
     <div class="footer-top">
         <div class="container">
@@ -495,7 +526,7 @@
                 <div class="col-lg-3 col-md-6 col-12">
                     <div class="single-footer">
                         <h2>Open Hours</h2>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+                        <p>Monday - Sunday </p>
                         <ul class="time-sidual">
                             <li class="day">24/24h></li>
                         </ul>
@@ -505,7 +536,7 @@
                     <div class="single-footer">
                         <h2>Newsletter</h2>
                         <p>subscribe to our newsletter to get all our news in your inbox.</p>
-                        <form action=""target="_blank" class="newsletter-inner">
+                        <form action="#Home"target="_blank" class="newsletter-inner">
                             <input name="EMAIL" placeholder="Your email address" class="common-input" onfocus="this.placeholder = ''"
                                    onblur="this.placeholder = 'Your email address'" required="" type="email">
                             <button class="btn">Subscribe</button>

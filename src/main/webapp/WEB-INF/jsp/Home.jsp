@@ -242,9 +242,6 @@
             margin-bottom: 10px;
             height: 266px;
         }
-
-
-
         .service-card img {
             width: 100%;
             height: auto;
@@ -258,8 +255,6 @@
         .service-info p {
             margin-bottom: 0;
         }
-
-
 
         .reviewer-info img {
             border-radius: 50%;
@@ -365,7 +360,7 @@
     <div class="contact-info">
         <div>📞 1234-5678-9012</div>
         <div>📧 Health@diabets.com</div>
-
+        <div>🕒 Mon - Sun </div>
     </div>
 </div>
 <nav>
@@ -377,10 +372,10 @@
         </div>
         <ul class="nav__links" id="nav-links">
             <li ><a href="${pageContext.request.contextPath}/">Home</a></li>
-            <li ><a href="${pageContext.request.contextPath}/about">About</a></li>
+            <li ><a href="#">About</a></li>
             <li ><a href="${pageContext.request.contextPath}/glycemie">Glycemies</a></li>
             <li><a  href="${pageContext.request.contextPath}/new">New Glycemie</a></li>
-            <li><a  href="${pageContext.request.contextPath}/contact">Contact</a></li>
+            <li><a  href="#">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -418,7 +413,6 @@
                                 <i class="fa fa-ambulance"></i>
                             </div>
                             <div class="single-content">
-                                <span>Donec luctus</span>
                                 <h4>Opening Hours</h4>
                                 <ul class="time-sidual">
                                     <li class="day"><span>24h/24h</span></li>
@@ -436,10 +430,9 @@
                                 <i class="icofont-prescription"></i>
                             </div>
                             <div class="single-content">
-                                <span>Donec luctus</span>
-                                <h4>Opening Hours</h4>
+                                <h4>Emergency Cases</h4>
                                 <ul class="time-sidual">
-                                    <li class="day"><span>24h/24h</span></li>
+                                    <li class="day"><span>Just Contact Us</span></li>
                                 </ul>
                                 <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
                             </div>
@@ -454,10 +447,9 @@
                                 <i class="icofont-ui-clock"></i>
                             </div>
                             <div class="single-content">
-                                <span>Donec luctus</span>
-                                <h4>Opening Hours</h4>
+                                <h4>Doctors Timetable</h4>
                                 <ul class="time-sidual">
-                                    <li class="day"><span>24h/24h</span></li>
+                                    <li class="day"><span>Always with you !</span></li>
                                 </ul>
                                 <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
                             </div>
@@ -498,6 +490,9 @@
         </div>
     </div>
 </section>
+
+<!-- Start Call to action -->
+<!--/ End Call to action -->
 <!-- Start Blog Area -->
 <section class="blog section" id="blog">
     <div class="container">
@@ -515,13 +510,27 @@
                 <!-- Single Blog -->
                 <div class="single-news">
                     <div class="news-head">
-                        <img src="https://www.wellhealthycare.com/wp-content/uploads/2022/02/Health-Write-For-Us.jpg" alt="#">
+                        <img src="http://localhost:63342/mediplus-lite/Template/mediplus-lite/img/blog3.jpg" alt="#">
                     </div>
                     <div class="news-body">
                         <div class="news-content">
-                            <div class="date">22 Aug, 2020</div>
-                            <h2><a href="blog-single.html">We have annnocuced our new product.</a></h2>
-                            <p class="text">Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do incididunt sed.</p>
+                            <div class="date"></div>
+                            <h2><a href="#Home">We have announced our new product.</a></h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Blog -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Single Blog -->
+                <div class="single-news">
+                    <div class="news-head">
+                        <img src="http://localhost:63342/mediplus-lite/Template/mediplus-lite/img/blog2.jpg" alt="#">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-content">
+                            <div class="date"></div>
+                            <h2><a href="#Home">Top five way for solving teeth problems.</a></h2>
                         </div>
                     </div>
                 </div>
@@ -535,23 +544,8 @@
                     </div>
                     <div class="news-body">
                         <div class="news-content">
-                            <div class="date">15 Jul, 2020</div>
-                            <h2><a href="">Top five way for solving teeth problems.</a></h2>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Blog -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Single Blog -->
-                <div class="single-news">
-                    <div class="news-head">
-                        <img src="https://www.wellhealthycare.com/wp-content/uploads/2022/02/Health-Write-For-Us.jpg" alt="#">
-                    </div>
-                    <div class="news-body">
-                        <div class="news-content">
-                            <div class="date">05 Jan, 2020</div>
-                            <h2><a href="">We provide highly business soliutions.</a></h2>
+                            <div class="date"></div>
+                            <h2><a href="#Home">We provide highly business solutions.</a></h2>
                         </div>
                     </div>
                 </div>
@@ -560,14 +554,14 @@
         </div>
     </div>
 </section>
+
 <section class="appointment"style="background-color: white;margin-top: -139px">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title">
-                    <h2>We Are Always Ready to Help You. Book An Appointment</h2>
-                    <img src="img/section-img.png" alt="#">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+                    <h2>We Are Always Ready to Help You. <br> Contact Us</h2>
+                    <img src="http://localhost:63342/mediplus-lite/Template/mediplus-lite/img/section-img.png" alt="#">
                 </div>
             </div>
         </div>
@@ -675,7 +669,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consulting</a></li>
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
@@ -688,7 +682,7 @@
                 <div class="col-lg-3 col-md-6 col-12">
                     <div class="single-footer">
                         <h2>Open Hours</h2>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+                        <p>Monday - Sunday </p>
                         <ul class="time-sidual">
                             <li class="day">24/24h></li>
                         </ul>
@@ -698,7 +692,7 @@
                     <div class="single-footer">
                         <h2>Newsletter</h2>
                         <p>subscribe to our newsletter to get all our news in your inbox.</p>
-                        <form action=""target="_blank" class="newsletter-inner">
+                        <form action="#Home"target="_blank" class="newsletter-inner">
                             <input name="EMAIL" placeholder="Your email address" class="common-input" onfocus="this.placeholder = ''"
                                    onblur="this.placeholder = 'Your email address'" required="" type="email">
                             <button class="btn">Subscribe</button>
@@ -723,6 +717,7 @@
     </div>
     <!--/ End Copyright -->
 </footer>
+<!-- Footer Area -->
 
 </body>
 </html>
