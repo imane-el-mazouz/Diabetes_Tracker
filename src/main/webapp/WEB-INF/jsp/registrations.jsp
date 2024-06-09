@@ -436,7 +436,7 @@
                         <h5 class="card-title">ID: ${glycemie.id}</h5>
                         <p class="card-text">Date: ${glycemie.date}</p>
                         <p class="card-text">Level: ${glycemie.level}</p>
-                        <a href="${pageContext.request.contextPath}/delete/${glycemie.id}" class="btn">Delete</a>
+                        <a href="${pageContext.request.contextPath}/delete/${glycemie.id}"onclick="return confirm('Are you sure you want to delete this glycemie?')" class="btn">Delete</a>
                     </div>
                 </div>
             </div>
@@ -444,7 +444,7 @@
     </div>
 
     <div class="text-center mt-4">
-        <a href="${pageContext.request.contextPath}/new" class="btn btn-primary">Add New Glycemie</a>
+        <a href="${pageContext.request.contextPath}/new" onclick="return confirm('Are you sure you want to add a new glycemie?')"class="btn btn-primary">Add New Glycemie</a>
     </div>
 </div>
 <footer id="footer" class="footer" style="background-color: white">

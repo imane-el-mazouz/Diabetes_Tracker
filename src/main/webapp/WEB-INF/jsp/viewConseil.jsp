@@ -6,31 +6,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Conseil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        h1, h2 {
+            color: #343a40;
+        }
+        .glycemia-chart-container {
+            margin-top: 20px;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-<h1>Conseil</h1>
-<p>Level: ${conseil.level}</p>
-<p>Message: ${conseil.message}</p>
+<div class="container">
+    <h1 class="text-center">Conseil</h1>
+    <div class="card mt-4">
+        <div class="card-body">
+            <p><strong>Level:</strong> ${conseil.level}</p>
+            <p><strong>Message:</strong> ${conseil.message}</p>
+        </div>
+    </div>
 
-<h2>Recommended Medications</h2>
-<ul>
-    <c:forEach var="medicament" items="${medicaments}">
-        <li>${medicament.name}: ${medicament.description}</li>
-    </c:forEach>
-</ul>
+    <h2 class="mt-5">Recommended Medications</h2>
+    <ul class="list-group">
+        <c:forEach var="medicament" items="${medicaments}">
+            <li class="list-group-item">${medicament.name}: ${medicament.description}</li>
+        </c:forEach>
+    </ul>
 
-<a href="${pageContext.request.contextPath}/glycemie">Back to list</a>
+    <a href="${pageContext.request.contextPath}/glycemie" class="btn btn-custom mt-3">Back to list</a>
 
-<h2>Glycemia Chart</h2>
-<form method="get" action="chart">
-    <label for="view">Select view type:</label>
-    <select id="view" name="view">
-        <option value="hourly" ${viewType == 'hourly' ? 'selected' : ''}>Hourly</option>
-    </select>
-    <button type="submit">Apply</button>
-</form>
-<canvas id="glycemiaChart" width="400" height="200"></canvas>
+    <div class="glycemia-chart-container">
+        <h2>Glycemia Chart</h2>
+        <form method="get" action="chart" class="form-inline mb-3">
+            <label for="view" class="mr-2">Select view type:</label>
+            <select id="view" name="view" class="form-control mr-2">
+                <option value="hourly" ${viewType == 'hourly' ? 'selected' : ''}>Hourly</option>
+            </select>
+            <button type="submit" class="btn btn-custom">Apply</button>
+        </form>
+        <canvas id="glycemiaChart" width="400" height="200"></canvas>
+    </div>
+</div>
 
 <script>
     const normalData = [];
@@ -41,27 +72,22 @@
     labels.push('${glycemie.date}');
     <c:choose>
     <c:when test="${glycemie.level == 'NORMAL'}">
-    normalData.push(${50});
+    normalData.push(50);
     hypoData.push(null);
     hyperData.push(null);
     </c:when>
     <c:when test="${glycemie.level == 'HYPOGLYCEMIA'}">
     normalData.push(null);
-    hypoData.push(${20});
+    hypoData.push(20);
     hyperData.push(null);
     </c:when>
     <c:otherwise>
     normalData.push(null);
     hypoData.push(null);
-    hyperData.push(${80});
+    hyperData.push(80);
     </c:otherwise>
     </c:choose>
     </c:forEach>
-
-    console.log(labels)
-    console.log(normalData)
-    console.log(hyperData)
-    console.log(hypoData)
 
     const ctx = document.getElementById('glycemiaChart').getContext('2d');
     const glycemiaChart = new Chart(ctx, {

@@ -439,7 +439,7 @@
 
         </div>
 
-        <button type="submit">Add</button>
+        <button type="submit" onclick="return confirm('Are you sure you want to add this registration?')">Add</button>
     </form>
 </div>
 <!-- Footer Area -->
