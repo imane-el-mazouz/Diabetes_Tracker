@@ -153,19 +153,17 @@
             text-align: center;
             max-width: 250px;
         }
-
         .feature .icon {
             width: 221px;
             height: 212px;
             border-radius: 50%;
-            background: radial-gradient(circle, blue, blue);
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-        }
+            background-color: #1A76D1;
 
-        .feature .icon img {
+            .feature .icon img {
             width: 101px;
             height: 99px;
         }
@@ -351,7 +349,7 @@
             margin-bottom: 24px;
             position: relative;
             color: blue;
-        }
+        }}
 
     </style>
 </head>
@@ -375,7 +373,7 @@
             <li ><a href="#">About</a></li>
             <li ><a href="${pageContext.request.contextPath}/glycemie">Glycemies</a></li>
             <li><a  href="${pageContext.request.contextPath}/new">New Glycemie</a></li>
-            <li><a  href="#">Contact</a></li>
+            <li><a  href="${pageContext.request.contextPath}/contact">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -462,19 +460,13 @@
 </section>
 <section class="why-choose-us">
     <h2>Why choose us?</h2>
-    <img src="http://localhost:63342/mediplus-lite/Template/mediplus-lite/img/section-img.png" alt="#">
+    <img src="http://localhost:63342/mediplus-lite/img/section-img.png" alt="#">
     <div class="features">
         <div class="feature">
             <div class="icon">
                 <img src="https://static.thenounproject.com/png/1587734-200.png" alt="Quality Icon">
             </div>
             <h3>WE DELIVER QUALITY</h3>
-        </div>
-        <div class="feature">
-            <div class="icon">
-                <img src="https://cdn.discordapp.com/attachments/1210252312530919475/1243522297734893598/image.png?ex=6651c7e3&is=66507663&hm=388e7a99203802a9ff4edf6754a9fb3bbd2520fe54cfe0d753172fe93270c187&" alt="Time Icon">
-            </div>
-            <h3>ALWAYS ON TIME</h3>
         </div>
         <div class="feature">
             <div class="icon">
@@ -500,7 +492,7 @@
             <div class="col-lg-12">
                 <div class="section-title">
                     <h2>Keep up with Our Most Recent Medical News.</h2>
-                    <img src="http://localhost:63342/mediplus-lite/Template/mediplus-lite/img/section-img.png" alt="#">
+                    <img src="http://localhost:63342/mediplus-lite/img/section-img.png" alt="#">
                     <p>News</p>
                 </div>
             </div>
@@ -510,7 +502,7 @@
                 <!-- Single Blog -->
                 <div class="single-news">
                     <div class="news-head">
-                        <img src="http://localhost:63342/mediplus-lite/Template/mediplus-lite/img/blog3.jpg" alt="#">
+                        <img src="http://localhost:63342/mediplus-lite/img/blog1.jpg" alt="#">
                     </div>
                     <div class="news-body">
                         <div class="news-content">
@@ -525,7 +517,7 @@
                 <!-- Single Blog -->
                 <div class="single-news">
                     <div class="news-head">
-                        <img src="http://localhost:63342/mediplus-lite/Template/mediplus-lite/img/blog2.jpg" alt="#">
+                        <img src="http://localhost:63342/mediplus-lite/img/blog2.jpg" alt="#">
                     </div>
                     <div class="news-body">
                         <div class="news-content">
@@ -555,56 +547,98 @@
     </div>
 </section>
 
-<section class="appointment"style="background-color: white;margin-top: -139px">
+<!-- Start Contact Us -->
+<section class="contact-us section">
+    <h2>Contact Us</h2>
+    <img src="http://localhost:63342/mediplus-lite/img/section-img.png" alt="#">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <h2>We Are Always Ready to Help You. <br> Contact Us</h2>
-                    <img src="http://localhost:63342/mediplus-lite/Template/mediplus-lite/img/section-img.png" alt="#">
+        <div class="inner">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-us-left">
+                        <div id="myMap" style="background-image:url('http://localhost:63342/mediplus-lite/img/contact-img.png');background-size: cover ; background-position: center"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-us-form">
+                        <h2>Contact With Us</h2>
+                        <p>If you have any questions please fell free to contact with us.</p>
+                        <!-- Form -->
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="name" placeholder="Name" required="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="email" name="email" placeholder="Email" required="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="phone" placeholder="Phone" required="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="subject" placeholder="Subject" required="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <textarea name="message" placeholder="Your Message" required=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group login-btn">
+                                        <button class="btn" type="submit">Send</button>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Do you want to subscribe our Newsletter ?</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!--/ End Form -->
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-12 col-12">
-                <form class="form" action="#">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="form-group">
-                                <input name="name" type="text" placeholder="Name">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="form-group">
-                                <input name="email" type="email" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="form-group">
-                                <input name="phone" type="text" placeholder="Phone">
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-12">
-                            <div class="form-group">
-                                <textarea name="message" placeholder="Write Your Message Here....."></textarea>
-                            </div>
+        <div class="contact-info">
+            <div class="row">
+                <!-- single-info -->
+                <div class="col-lg-4 col-12 ">
+                    <div class="single-info">
+                        <i class="icofont icofont-ui-call"></i>
+                        <div class="content">
+                            <h3>+(000) 1234 56789</h3>
+                            <p>health@diabets.com</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-5 col-md-4 col-12">
-                            <div class="form-group">
-                                <div class="button">
-                                    <button type="submit" class="btn">Book An Appointment</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-6 col-md-12 ">
-                <div class="appointment-image">
-                    <img src="http://localhost:63342/mediplus-lite/Template/mediplus-lite/img/contact-img.png" alt="#">
                 </div>
+                <!--/End single-info -->
+                <!-- single-info -->
+                <div class="col-lg-4 col-12 ">
+                    <div class="single-info">
+                        <i class="icofont-google-map"></i>
+                        <div class="content">
+                            <h3>hyuhy</h3>
+                            <p>hyu,huooop</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 ">
+                    <div class="single-info">
+                        <i class="icofont icofont-wall-clock"></i>
+                        <div class="content">
+                            <h3>Mon - Sun </h3>
+                            <p>Always with you !</p>
+                        </div>
+                    </div>
+                </div>
+                <!--/End single-info -->
             </div>
         </div>
     </div>
@@ -721,6 +755,8 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="${pageContext.request.contextPath}/JS/script.js"></script>
-
+<script>
+    <%@include file="/JS/script.js"%>
+</script>
 </body>
 </html>

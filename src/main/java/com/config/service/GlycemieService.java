@@ -42,4 +42,7 @@ public class GlycemieService {
         LocalDateTime lastHour = LocalDateTime.now().minusHours(1);
         return (List<Glycemie>) glycemieRepo.findAll();
     }
+
+
+
 }

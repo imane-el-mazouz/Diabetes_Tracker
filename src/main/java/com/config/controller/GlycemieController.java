@@ -26,8 +26,10 @@ public class GlycemieController {
     private GlycemieService glycemieService;
 
     @Autowired
+
     private ConseilService conseilService;
     @Autowired
+
     private MedicamentService medicamentService ;
 
     @GetMapping(value = "/glycemie")
@@ -41,6 +43,11 @@ public class GlycemieController {
         model.addAttribute("glycemie", new Glycemie());
         return "add";
     }
+
+    @GetMapping
+
+
+
 
 //    @PostMapping("/new")
 //    public String saveGlycemie(@RequestParam("level") double levelValue,
@@ -126,11 +133,7 @@ public class GlycemieController {
     @GetMapping(value = "/chart")
     public String getChartData(@RequestParam("view") String viewType, Model model) {
         List<Glycemie> glycemies;
-
-
-            glycemies = glycemieService.findHourlyGlycemiaData();
-
-
+        glycemies = glycemieService.findHourlyGlycemiaData();
         model.addAttribute("listGlycemies", glycemies);
         model.addAttribute("viewType", viewType);
         return "viewConseil";

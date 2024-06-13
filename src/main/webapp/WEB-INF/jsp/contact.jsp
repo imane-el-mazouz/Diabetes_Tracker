@@ -1,10 +1,19 @@
-<%@ page import="java.util.ArrayList" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: user
+  Date: 09/05/2024
+  Time: 16:38
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <!--
+      - custom css link
+    -->
     <style><%@include file="/CSS/style.css"%></style>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +24,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <title>Home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -231,9 +242,6 @@
             margin-bottom: 10px;
             height: 266px;
         }
-
-
-
         .service-card img {
             width: 100%;
             height: auto;
@@ -247,8 +255,6 @@
         .service-info p {
             margin-bottom: 0;
         }
-
-
 
         .reviewer-info img {
             border-radius: 50%;
@@ -338,107 +344,24 @@
             color: white ;
         }
 
-        .container-fluid {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            margin: 20px auto auto;
-        }
-
-
-        .card {
-
-                background-color: #fff;
-                margin-bottom: 20px;
-                border-radius: 15px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s;
-
-        }
-
-        .card:hover {
-            transform: scale(1.02);
-        }
-
-        .card-body {
-            padding: 20px;
-        }
-
-        .card-title {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .card-text {
-            font-size: 16px;
-        }
-
-        .btn {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 8px 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        .btn delete {
-            --bs-btn-padding-x: 0.75rem;
-            --bs-btn-padding-y: 0.375rem;
-            --bs-btn-font-family: ;
-            --bs-btn-font-size: 1rem;
-            --bs-btn-font-weight: 400;
-            --bs-btn-line-height: 1.5;
-
-            --bs-btn-bg: transparent;
-
-            --bs-btn-border-color: transparent;
-
-            --bs-btn-hover-border-color: transparent;
-            --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-            --bs-btn-disabled-opacity: 0.65;
-
-            display: inline-block;
-            padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
-            font-family: var(--bs-btn-font-family);
-            font-size: var(--bs-btn-font-size);
-            font-weight: var(--bs-btn-font-weight);
-            line-height: var(--bs-btn-line-height);
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin-bottom: 24px;
+            position: relative;
             color: blue;
-            text-align: center;
-            text-decoration: none;
-            vertical-align: middle;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-            background-color: var(--bs-btn-bg);
-            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
         }
+
     </style>
-    <title>Home page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 <div id="hey">
-<div class="contact-info">
-    <div>📞 1234-5678-9012</div>
-    <div>📧 Health@diabets.com</div>
-    <div>🕒 Mon - Sun </div>
-</div>
+    <div class="contact-info">
+        <div>📞 1234-5678-9012</div>
+        <div>📧 Health@diabets.com</div>
+        <div>🕒 Mon - Sun </div>
+    </div>
 </div>
 <nav>
     <div class="nav__bar">
@@ -456,31 +379,108 @@
         </ul>
     </div>
 </nav>
-<div class="container-fluid">
-    <h1 class="text-center" style="font-size: 32px;font-weight: 600;text-transform: capitalize;margin-bottom: 24px;color: blue;">List of recorded blood glucose readings.</h1>
-    <div class="row">
-        <c:forEach var="glycemie" items="${listGlycemies}">
-            <div class="col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">ID: ${glycemie.id}</h5>
-                        <p class="card-text">Date: ${glycemie.date}</p>
-                        <p class="card-text">Level: ${glycemie.level}</p>
-                        <div class="text-center" >
-                        <a href="${pageContext.request.contextPath}/delete/${glycemie.id}"onclick="return confirm('Are you sure you want to delete this glycemie?')" class="btn" style="background-color: blue;
-            color: white;">Delete</a>
-                        </div>
-                        </div>
+<section class="slider">
+    <div class="hero-slider">
+        <div class="single-slider" style="background-image:url('https://www.ctvnews.ca/content/dam/ctvnews/en/images/2019/6/26/doctor-medical-stock-1-4484029-1674495685224.jpg'); height: 60vh;margin-top: -70px">
+        </div>
+    </div>
+</section>
+<!-- End Breadcrumbs -->
+
+<!-- Start Contact Us -->
+<section class="contact-us section">
+    <div class="container">
+        <div class="inner">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-us-left">
+                        <div id="myMap" style="background-image:url('https://blog.pascal-martin.fr/public/google-maps/4/carte-ex6-zoom-loin-metro.png');background-size: cover ; background-position: center"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-us-form">
+                        <h2>Contact With Us</h2>
+                        <p>If you have any questions please fell free to contact with us.</p>
+                        <!-- Form -->
+                            <form class="form">
+                                <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="name" placeholder="Name" required="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="email" name="email" placeholder="Email" required="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="phone" placeholder="Phone" required="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="subject" placeholder="Subject" required="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <textarea name="message" placeholder="Your Message" required=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group login-btn">
+                                        <button class="btn" type="submit">Send</button>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Do you want to subscribe our Newsletter ?</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!--/ End Form -->
+                    </div>
                 </div>
             </div>
-
-        </c:forEach>
+        </div>
+        <div class="contact-info">
+            <div class="row">
+                <!-- single-info -->
+                <div class="col-lg-4 col-12 ">
+                    <div class="single-info">
+                        <i class="icofont icofont-ui-call"></i>
+                        <div class="content">
+                            <h3>+(000) 1234 56789</h3>
+                            <p>health@diabets.com</p>
+                        </div>
+                    </div>
+                </div>
+                <!--/End single-info -->
+                <!-- single-info -->
+                <div class="col-lg-4 col-12 ">
+                    <div class="single-info">
+                        <i class="icofont-google-map"></i>
+                        <div class="content">
+                            <h3>hyuhy</h3>
+                            <p>hyu,huooop</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 ">
+                    <div class="single-info">
+                        <i class="icofont icofont-wall-clock"></i>
+                        <div class="content">
+                            <h3>Mon - Sun </h3>
+                            <p>Always with you !</p>
+                        </div>
+                    </div>
+                </div>
+                <!--/End single-info -->
+            </div>
+        </div>
     </div>
-
-    <div class="text-center mt-4" >
-        <a href="${pageContext.request.contextPath}/new" onclick="return confirm('Are you sure you want to add a new glycemie?')"class="btn btn-primary">Add New Glycemie</a>
-    </div>
-</div>
+</section>
 <footer id="footer" class="footer ">
     <!-- Footer Top -->
     <div class="footer-top">
@@ -564,7 +564,10 @@
     </div>
     <!--/ End Copyright -->
 </footer>
+<!-- Footer Area -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="${pageContext.request.contextPath}/JS/script.js"></script>
 <script>
     <%@include file="/JS/script.js"%>
 </script>

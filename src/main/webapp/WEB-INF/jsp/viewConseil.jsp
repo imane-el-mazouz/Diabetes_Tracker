@@ -500,7 +500,7 @@
         </div>
         <ul class="nav__links" id="nav-links">
             <li ><a href="${pageContext.request.contextPath}/">Home</a></li>
-            <li ><a href="${pageContext.request.contextPath}/about">About</a></li>
+            <li ><a href="#">About</a></li>
             <li ><a href="${pageContext.request.contextPath}/glycemie">Glycemies</a></li>
             <li><a  href="${pageContext.request.contextPath}/new">New Glycemie</a></li>
             <li><a  href="${pageContext.request.contextPath}/contact">Contact</a></li>

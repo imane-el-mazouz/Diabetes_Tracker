@@ -407,16 +407,17 @@
         </div>
         <ul class="nav__links" id="nav-links">
             <li ><a href="${pageContext.request.contextPath}/">Home</a></li>
-            <li ><a href="${pageContext.request.contextPath}/about">About</a></li>
+            <li ><a href="#">About</a></li>
             <li ><a href="${pageContext.request.contextPath}/glycemie">Glycemies</a></li>
             <li><a  href="${pageContext.request.contextPath}/new">New Glycemie</a></li>
             <li><a  href="${pageContext.request.contextPath}/contact">Contact</a></li>
+
         </ul>
     </div>
 </nav>
 <section class="slider">
     <div class="hero-slider">
-        <div class="single-slider" style="background-image:url('https://acteurdemasante.lu/wp-content/uploads/2021/10/2-1024x654.png'); height: 60vh;">
+        <div class="single-slider" style="background-image:url('https://acteurdemasante.lu/wp-content/uploads/2021/10/2-1024x654.png'); height: 60vh;margin-top: -70px">
         </div>
     </div>
 </section>
@@ -522,7 +523,9 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="${pageContext.request.contextPath}/JS/script.js"></script>
-
+<script>
+    <%@include file="/JS/script.js"%>
+</script>
 </body>
 </html>
 
